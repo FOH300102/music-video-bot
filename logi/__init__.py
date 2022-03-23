@@ -17,10 +17,10 @@ from config import MONGO_DB_URI as mango
 from config import (MUSIC_BOT_NAME, OWNER_ID, STRING1, STRING2, STRING3,
                     STRING4, STRING5, SUDO_USERS, UPSTREAM_BRANCH,
                     UPSTREAM_REPO, get_queue)
-from Yukki.Core.Clients.cli import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4,
+from logi.Core.Clients.cli import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4,
                                     ASS_CLI_5, LOG_CLIENT, app)
-from Yukki.Utilities.changers import time_to_seconds
-from Yukki.Utilities.tasks import install_requirements
+from logi.Utilities.changers import time_to_seconds
+from logi.Utilities.tasks import install_requirements
 
 loop = asyncio.get_event_loop()
 console = Console()
@@ -105,7 +105,7 @@ async def initiate_bot():
     )
     console.print(header)
     with console.status(
-        "[magenta] Yukki Music Bot Booting...",
+        "[magenta]  Music Bot Booting...",
     ) as status:
         console.print("┌ [red]Booting Up The Clients...\n")
         await app.start()
