@@ -7,31 +7,31 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import get_queue
-from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
-from Yukki.Core.PyTgCalls import Queues
-from Yukki.Core.PyTgCalls.Converter import convert
-from Yukki.Core.PyTgCalls.Downloader import download
-from Yukki.Core.PyTgCalls.Yukki import (join_stream, pause_stream,
+from logi import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
+from logi.Core.PyTgCalls import Queues
+from logi.Core.PyTgCalls.Converter import convert
+from logi.Core.PyTgCalls.Downloader import download
+from logi.Core.PyTgCalls.Yukki import (join_stream, pause_stream,
                                         resume_stream, skip_stream,
                                         skip_video_stream, stop_stream)
-from Yukki.Database import (_get_playlists, delete_playlist, get_playlist,
+from logi.Database import (_get_playlists, delete_playlist, get_playlist,
                             get_playlist_names, is_active_chat,
                             remove_active_video_chat, save_playlist)
-from Yukki.Database.queue import (add_active_chat, is_active_chat,
+from logi.Database.queue import (add_active_chat, is_active_chat,
                                   is_music_playing, music_off, music_on,
                                   remove_active_chat)
-from Yukki.Decorators.admins import AdminRightsCheckCB
-from Yukki.Decorators.checker import checkerCB
-from Yukki.Inline import (audio_markup, audio_markup2, download_markup,
+from logi.Decorators.admins import AdminRightsCheckCB
+from logi.Decorators.checker import checkerCB
+from logi.Inline import (audio_markup, audio_markup2, download_markup,
                           fetch_playlist, paste_queue_markup, primary_markup,
                           secondary_markup2)
-from Yukki.Utilities.changers import time_to_seconds
-from Yukki.Utilities.chat import specialfont_to_normal
-from Yukki.Utilities.paste import isPreviewUp, paste_queue
-from Yukki.Utilities.theme import check_theme
-from Yukki.Utilities.thumbnails import gen_thumb
-from Yukki.Utilities.timer import start_timer
-from Yukki.Utilities.youtube import get_m3u8, get_yt_info_id
+from logi.Utilities.changers import time_to_seconds
+from logi.Utilities.chat import specialfont_to_normal
+from logi.Utilities.paste import isPreviewUp, paste_queue
+from logi.Utilities.theme import check_theme
+from logi.Utilities.thumbnails import gen_thumb
+from logi.Utilities.timer import start_timer
+from logi.Utilities.youtube import get_m3u8, get_yt_info_id
 
 loop = asyncio.get_event_loop()
 
@@ -167,7 +167,7 @@ async def admin_risghts(_, CallbackQuery):
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}\n💚 [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
                 )
                 await start_timer(
                     videoid,
@@ -244,7 +244,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)"
+                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}\n💚 [♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)"
                         ),
                     )
                     os.remove(thumb)
@@ -302,7 +302,7 @@ async def admin_risghts(_, CallbackQuery):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)"
+                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}\n💚 [♡ᴄᴏᴅᴇʀ⏤͟͟★](https://t.me/cl_me_logesh)"
                     ),
                 )
                 os.remove(thumb)
@@ -446,7 +446,7 @@ async def play_playlist(_, CallbackQuery):
                 got_queue.append(to_append)
                 await music_on(chat_id)
                 await add_active_chat(chat_id)
-                cap = f"🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)"
+                cap = f"🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}\n💚 [♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)"
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
