@@ -9,7 +9,7 @@ from pyrogram.types.messages_and_media import message
 from config import get_queue
 from logi import BOT_USERNAME, db_mem
 from logi.Core.PyTgCalls import Queues
-from logi.Core.PyTgCalls.Yukki import (join_live_stream, join_video_stream,
+from logi.Core.PyTgCalls.logi import (join_live_stream, join_video_stream,
                                         stop_stream)
 from logi.Database import (add_active_chat, add_active_video_chat,
                             is_active_chat, music_off, music_on,
