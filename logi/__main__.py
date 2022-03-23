@@ -12,19 +12,19 @@ from youtubesearchpython import VideosSearch
 
 from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
                     STRING4, STRING5)
-from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
+from logi import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
                    OWNER_ID, app)
-from Yukki.Core.Clients.cli import LOG_CLIENT
-from Yukki.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
+from logi.Core.Clients.cli import LOG_CLIENT
+from logi.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
                                         pytgcalls4, pytgcalls5)
-from Yukki.Database import (get_active_chats, get_active_video_chats,
+from logi.Database import (get_active_chats, get_active_video_chats,
                             get_sudoers, is_on_off, remove_active_chat,
                             remove_active_video_chat)
-from Yukki.Inline import private_panel
-from Yukki.Plugins import ALL_MODULES
-from Yukki.Utilities.inline import paginate_modules
+from logi.Inline import private_panel
+from logi.Plugins import ALL_MODULES
+from logi.Utilities.inline import paginate_modules
 
 loop = asyncio.get_event_loop()
 console = Console()
@@ -115,8 +115,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("OfficialYukki")
-            await ASS_CLI_1.join_chat("YukkiSupport")
+            await ASS_CLI_1.join_chat("logi_channel")
+            await ASS_CLI_1.join_chat("logi_channel")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -134,8 +134,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_2.join_chat("OfficialYukki")
-            await ASS_CLI_2.join_chat("YukkiSupport")
+            await ASS_CLI_2.join_chat("logi_channel")
+            await ASS_CLI_2.join_chat("logi_channel")
         except:
             pass
         console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
@@ -172,8 +172,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_4.join_chat("OfficialYukki")
-            await ASS_CLI_4.join_chat("YukkiSupport")
+            await ASS_CLI_4.join_chat("logi_channel")
+            await ASS_CLI_4.join_chat("logi_channel")
         except:
             pass
         console.print(f"├[red] Assistant 4 Started as {ASSNAME4}!")
@@ -191,8 +191,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_5.join_chat("OfficialYukki")
-            await ASS_CLI_5.join_chat("YukkiSupport")
+            await ASS_CLI_5.join_chat("logi_channel")
+            await ASS_CLI_5.join_chat("logi_channel")
         except:
             pass
         console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
@@ -210,8 +210,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await LOG_CLIENT.join_chat("OfficialYukki")
-            await LOG_CLIENT.join_chat("YukkiSupport")
+            await LOG_CLIENT.join_chat("logi_channel")
+            await LOG_CLIENT.join_chat("logi_channel")
         except:
             pass
     console.print(f"└[red] logi Music Bot Boot Completed.")
