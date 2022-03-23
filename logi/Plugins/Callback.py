@@ -11,7 +11,7 @@ from logi import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
 from logi.Core.PyTgCalls import Queues
 from logi.Core.PyTgCalls.Converter import convert
 from logi.Core.PyTgCalls.Downloader import download
-from logi.Core.PyTgCalls.Yukki import (join_stream, pause_stream,
+from logi.Core.PyTgCalls.logi import (join_stream, pause_stream,
                                         resume_stream, skip_stream,
                                         skip_video_stream, stop_stream)
 from logi.Database import (_get_playlists, delete_playlist, get_playlist,
