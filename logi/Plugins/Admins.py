@@ -13,7 +13,7 @@ from logi import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
 from logi.Core.PyTgCalls import Queues
 from logi.Core.PyTgCalls.Converter import convert
 from logi.Core.PyTgCalls.Downloader import download
-from logi.Core.PyTgCalls.Yukki import (pause_stream, resume_stream,
+from logi.Core.PyTgCalls.logi import (pause_stream, resume_stream,
                                         skip_stream, skip_video_stream,
                                         stop_stream)
 from logi.Database import (is_active_chat, is_music_playing, music_off,
