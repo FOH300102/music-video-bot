@@ -19,14 +19,14 @@ from pyrogram.types import Message
 
 from config import (MONGO_DB_URI, MUSIC_BOT_NAME, STRING1, STRING2, STRING3,
                     STRING4, STRING5)
-from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
+from logi import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    BOT_ID, MUSIC_BOT_NAME, SUDOERS, app, boottime)
-from Yukki.Database import get_gbans_count, get_served_chats, get_sudoers
-from Yukki.Inline import stats1, stats2, stats3, stats4, stats5, stats6, stats7
-from Yukki.Plugins import ALL_MODULES
-from Yukki.Utilities.ping import get_readable_time
+from logi.Database import get_gbans_count, get_served_chats, get_sudoers
+from logi.Inline import stats1, stats2, stats3, stats4, stats5, stats6, stats7
+from logi.Plugins import ALL_MODULES
+from logi.Utilities.ping import get_readable_time
 
-__MODULE__ = "Stats"
+__MODULE__ = "✨sᴛᴀᴛs✨"
 __HELP__ = """
 
 
