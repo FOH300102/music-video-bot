@@ -8,31 +8,31 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
 
-from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from logi import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
-from Yukki.Core.PyTgCalls.Converter import convert
-from Yukki.Core.PyTgCalls.Downloader import download
-from Yukki.Database import (get_active_video_chats, get_video_limit,
+from logi.Core.PyTgCalls.Converter import convert
+from logi.Core.PyTgCalls.Downloader import download
+from logi.Database import (get_active_video_chats, get_video_limit,
                             is_active_video_chat, is_on_off)
-from Yukki.Decorators.assistant import AssistantAdd
-from Yukki.Decorators.checker import checker
-from Yukki.Decorators.permission import PermissionCheck
-from Yukki.Inline import (choose_markup, livestream_markup, playlist_markup,
+from logi.Decorators.assistant import AssistantAdd
+from logi.Decorators.checker import checker
+from logi.Decorators.permission import PermissionCheck
+from logi.Inline import (choose_markup, livestream_markup, playlist_markup,
                           search_markup, search_markup2, stream_quality_markup,
                           url_markup, url_markup2)
-from Yukki.Utilities.changers import seconds_to_min, time_to_seconds
-from Yukki.Utilities.chat import specialfont_to_normal
-from Yukki.Utilities.theme import check_theme
-from Yukki.Utilities.thumbnails import gen_thumb
-from Yukki.Utilities.url import get_url
-from Yukki.Utilities.videostream import start_live_stream, start_video_stream
-from Yukki.Utilities.youtube import (get_m3u8, get_yt_info_id,
+from logi.Utilities.changers import seconds_to_min, time_to_seconds
+from logi.Utilities.chat import specialfont_to_normal
+from logi.Utilities.theme import check_theme
+from logi.Utilities.thumbnails import gen_thumb
+from logi.Utilities.url import get_url
+from logi.Utilities.videostream import start_live_stream, start_video_stream
+from logi.Utilities.youtube import (get_m3u8, get_yt_info_id,
                                      get_yt_info_query,
                                      get_yt_info_query_slider)
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "VideoCalls"
+__MODULE__ = "✨ᴠɪᴅᴇᴏᴄᴀʟʟs✨"
 __HELP__ = f"""
 
 /play [Reply to any Video] or [YT Link] or [Music Name]
