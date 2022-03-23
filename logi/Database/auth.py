@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Yukki import db
+from logi import db
 
 authdb = db.adminauth
 
