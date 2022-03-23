@@ -6,10 +6,10 @@ import psutil
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
-from Yukki.Utilities.ping import get_readable_time
+from logi import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
+from logi.Utilities.ping import get_readable_time
 
-__MODULE__ = "Ping"
+__MODULE__ = "✨ᴘɪɴɢ✨"
 __HELP__ = """
 
 /ping - Check if Bot is alive or not.
