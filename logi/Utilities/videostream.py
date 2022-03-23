@@ -7,16 +7,16 @@ from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types.messages_and_media import message
 
 from config import get_queue
-from Yukki import BOT_USERNAME, db_mem
-from Yukki.Core.PyTgCalls import Queues
-from Yukki.Core.PyTgCalls.Yukki import (join_live_stream, join_video_stream,
+from logi import BOT_USERNAME, db_mem
+from logi.Core.PyTgCalls import Queues
+from logi.Core.PyTgCalls.Yukki import (join_live_stream, join_video_stream,
                                         stop_stream)
-from Yukki.Database import (add_active_chat, add_active_video_chat,
+from logi.Database import (add_active_chat, add_active_video_chat,
                             is_active_chat, music_off, music_on,
                             remove_active_chat)
-from Yukki.Inline import (audio_markup, audio_markup2, primary_markup,
+from logi.Inline import (audio_markup, audio_markup2, primary_markup,
                           secondary_markup, secondary_markup2)
-from Yukki.Utilities.timer import start_timer
+from logi.Utilities.timer import start_timer
 
 loop = asyncio.get_event_loop()
 
