@@ -9,25 +9,25 @@ from pyrogram import filters
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from Yukki import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app
-from Yukki import boottime as bot_start_time
-from Yukki import db, random_assistant
-from Yukki.Core.PyTgCalls import Yukki
-from Yukki.Database import (add_nonadmin_chat, add_served_chat,
+from logi import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app
+from logi import boottime as bot_start_time
+from logi import db, random_assistant
+from logi.Core.PyTgCalls import Yukki
+from logi.Database import (add_nonadmin_chat, add_served_chat,
                             blacklisted_chats, get_assistant, get_authuser,
                             get_authuser_names, get_start, is_nonadmin_chat,
                             is_served_chat, remove_active_chat,
                             remove_nonadmin_chat, save_assistant, save_start)
-from Yukki.Decorators.admins import ActualAdminCB
-from Yukki.Decorators.permission import PermissionCheck
-from Yukki.Inline import (custommarkup, dashmarkup, setting_markup,
+from logi.Decorators.admins import ActualAdminCB
+from logi.Decorators.permission import PermissionCheck
+from logi.Inline import (custommarkup, dashmarkup, setting_markup,
                           setting_markup2, start_pannel, usermarkup, volmarkup)
-from Yukki.Utilities.assistant import get_assistant_details
-from Yukki.Utilities.ping import get_readable_time
+from logi.Utilities.assistant import get_assistant_details
+from logi.Utilities.ping import get_readable_time
 
 welcome_group = 2
 
-__MODULE__ = "Essentials"
+__MODULE__ = "✨ᴇssᴇɴᴛɪᴀʟs✨"
 __HELP__ = """
 
 
