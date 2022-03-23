@@ -5,14 +5,14 @@ import shutil
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import get_queue
-from Yukki import BOT_USERNAME, db_mem
-from Yukki.Core.PyTgCalls import Queues
-from Yukki.Core.PyTgCalls.Yukki import join_stream
-from Yukki.Database import (add_active_chat, add_active_video_chat,
+from logi import BOT_USERNAME, db_mem
+from logi.Core.PyTgCalls import Queues
+from logi.Core.PyTgCalls.Yukki import join_stream
+from logi.Database import (add_active_chat, add_active_video_chat,
                             is_active_chat, music_off, music_on)
-from Yukki.Inline import (audio_markup, audio_markup2, primary_markup,
+from logi.Inline import (audio_markup, audio_markup2, primary_markup,
                           secondary_markup)
-from Yukki.Utilities.timer import start_timer
+from logi.Utilities.timer import start_timer
 
 loop = asyncio.get_event_loop()
 
