@@ -1,7 +1,7 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from Yukki import db_mem
+from logi import db_mem
 from config import OWNER_USERNAME
 
 
