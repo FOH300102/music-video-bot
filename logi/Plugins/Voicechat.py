@@ -9,16 +9,16 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 
 from config import get_queue
-from Yukki import SUDOERS, app, db_mem, random_assistant
-from Yukki.Database import (get_active_chats, get_active_video_chats,
+from logi import SUDOERS, app, db_mem, random_assistant
+from logi.Database import (get_active_chats, get_active_video_chats,
                             get_assistant, is_active_chat, save_assistant)
-from Yukki.Decorators.checker import checker, checkerCB
-from Yukki.Inline import primary_markup
-from Yukki.Utilities.assistant import get_assistant_details
+from logi.Decorators.checker import checker, checkerCB
+from logi.Inline import primary_markup
+from logi.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "Join/Leave"
+__MODULE__ = "✨ᴊᴏɪɴ/ʟᴇᴀᴠᴇ✨"
 __HELP__ = """
 
 **Note:**
