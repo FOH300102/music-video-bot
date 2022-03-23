@@ -1,6 +1,6 @@
 from config import LOG_GROUP_ID
-from Yukki.Core.Clients.cli import LOG_CLIENT
-from Yukki.Database import is_on_off
+from logi.Core.Clients.cli import LOG_CLIENT
+from logi.Database import is_on_off
 
 
 def logging(mystic):
