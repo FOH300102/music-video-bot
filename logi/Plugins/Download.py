@@ -11,14 +11,14 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InputMediaDocument, InputMediaVideo, Message)
 from youtubesearchpython import VideosSearch
 
-from Yukki import MUSIC_BOT_NAME, app
-from Yukki.Utilities.changers import time_to_seconds
-from Yukki.Utilities.download import get_formats, get_type
+from logi import MUSIC_BOT_NAME, app
+from logi.Utilities.changers import time_to_seconds
+from logi.Utilities.download import get_formats, get_type
 
 user_time = {}
 flex = {}
 
-__MODULE__ = "Global Ban"
+__MODULE__ = "✨ɢʟᴏʙᴀʟ ʙᴀɴ✨"
 __HELP__ = """
 
 **Note:**
