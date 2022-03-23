@@ -6,16 +6,16 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 
-from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from logi import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
-from Yukki.Decorators.permission import PermissionCheck
-from Yukki.Inline import song_download_markup, song_markup
-from Yukki.Utilities.url import get_url
-from Yukki.Utilities.youtube import get_yt_info_query, get_yt_info_query_slider
+from logi.Decorators.permission import PermissionCheck
+from logi.Inline import song_download_markup, song_markup
+from logi.Utilities.url import get_url
+from logi.Utilities.youtube import get_yt_info_query, get_yt_info_query_slider
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "Song"
+__MODULE__ = "✨sᴏɴɢ✨"
 __HELP__ = """
 
 
@@ -54,7 +54,7 @@ async def play(_, message: Message):
         buttons = song_download_markup(videoid, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -80,7 +80,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -131,7 +131,7 @@ async def song_right(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
@@ -156,7 +156,7 @@ async def song_right(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚 [♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
