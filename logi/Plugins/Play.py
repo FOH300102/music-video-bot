@@ -6,26 +6,26 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 
-from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from logi import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
-from Yukki.Core.PyTgCalls.Converter import convert
-from Yukki.Core.PyTgCalls.Downloader import download
-from Yukki.Database import (get_active_video_chats, get_video_limit,
+from logi.Core.PyTgCalls.Converter import convert
+from logi.Core.PyTgCalls.Downloader import download
+from logi.Database import (get_active_video_chats, get_video_limit,
                             is_active_video_chat)
-from Yukki.Decorators.assistant import AssistantAdd
-from Yukki.Decorators.checker import checker
-from Yukki.Decorators.logger import logging
-from Yukki.Decorators.permission import PermissionCheck
-from Yukki.Inline import (livestream_markup, playlist_markup, search_markup,
+from logi.Decorators.assistant import AssistantAdd
+from logi.Decorators.checker import checker
+from logi.Decorators.logger import logging
+from logi.Decorators.permission import PermissionCheck
+from logi.Inline import (livestream_markup, playlist_markup, search_markup,
                           search_markup2, url_markup, url_markup2)
-from Yukki.Utilities.changers import seconds_to_min, time_to_seconds
-from Yukki.Utilities.chat import specialfont_to_normal
-from Yukki.Utilities.stream import start_stream, start_stream_audio
-from Yukki.Utilities.theme import check_theme
-from Yukki.Utilities.thumbnails import gen_thumb
-from Yukki.Utilities.url import get_url
-from Yukki.Utilities.videostream import start_stream_video
-from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
+from logi.Utilities.changers import seconds_to_min, time_to_seconds
+from logi.Utilities.chat import specialfont_to_normal
+from logi.Utilities.stream import start_stream, start_stream_audio
+from logi.Utilities.theme import check_theme
+from logi.Utilities.thumbnails import gen_thumb
+from logi.Utilities.url import get_url
+from logi.Utilities.videostream import start_stream_video
+from logi.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
 
 loop = asyncio.get_event_loop()
@@ -156,7 +156,7 @@ async def play(_, message: Message):
         buttons = url_markup2(videoid, duration_min, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚 [♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -187,7 +187,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -375,7 +375,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
@@ -398,7 +398,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚**Any issues contact :** [♡𝑳𝑶𝑮𝑬𝑺𝑯 ⏤͟͟★](https://t.me/cl_me_logesh)",
+            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__\n💚[♡ᴄᴏᴅᴇʀ ⏤͟͟★](https://t.me/cl_me_logesh)",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
