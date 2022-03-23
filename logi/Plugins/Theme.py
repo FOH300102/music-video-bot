@@ -2,9 +2,9 @@ from typing import Dict, List, Union
 
 from pyrogram import Client, filters
 
-from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, db
-from Yukki.Database import _get_theme, get_theme, save_theme
-from Yukki.Decorators.permission import PermissionCheck
+from logi import BOT_USERNAME, MUSIC_BOT_NAME, app, db
+from logi.Database import _get_theme, get_theme, save_theme
+from logi.Decorators.permission import PermissionCheck
 
 themes = [
     "blue",
@@ -29,7 +29,7 @@ themes2 = [
     "yellow",
 ]
 
-__MODULE__ = "Theme"
+__MODULE__ = "✨ᴛʜᴇᴍᴇ✨"
 __HELP__ = """
 
 
