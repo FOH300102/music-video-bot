@@ -5,14 +5,14 @@
 <p align="center">
 <a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python"></a>
 <br>
-    <img src="https://img.shields.io/github/license/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="LICENSE">
-    <img src="https://img.shields.io/github/contributors/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Contributors">
-    <img src="https://img.shields.io/github/repo-size/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Repository Size"> <br>
-    <img src="https://img.shields.io/github/forks/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Forks">
-    <img src="https://img.shields.io/github/stars/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Stars">
-    <img src="https://img.shields.io/github/watchers/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Watchers">
-    <img src="https://img.shields.io/github/commit-activity/w/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Commit Activity">
-    <img src="https://img.shields.io/github/issues/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Issues">
+    <img src="https://img.shields.io/github/license/LOGI-LAB/music-video-bot?style=for-the-badge" alt="LICENSE">
+    <img src="https://img.shields.io/github/contributors/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Contributors">
+    <img src="https://img.shields.io/github/repo-size/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Repository Size"> <br>
+    <img src="https://img.shields.io/github/forks/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Forks">
+    <img src="https://img.shields.io/github/stars/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Stars">
+    <img src="https://img.shields.io/github/watchers/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Watchers">
+    <img src="https://img.shields.io/github/commit-activity/w/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Commit Activity">
+    <img src="https://img.shields.io/github/issues/LOGI-LAB/music-video-bot?style=for-the-badge" alt="Issues">
 </p>
 
 <h3 align="center">
@@ -21,8 +21,8 @@
 
 <p align="center">
     A Support Group and ready-to-use running instance of this bot can be found on Telegram <br>
-    <a href="https://t.me/NOPITA_MUSIC_BOT"> NOPITA BOT </a> |
-    <a href="https://t.me/LOGI_CHANNEL"> LOGI </a>
+    <a href="https://telegram.me/LOGI_RO_BOT"> NOPITA BOT </a> |
+    <a href="https://telegram.me/LOGI_CHANNEL"> LOGI </a>
 </p>
 
 
@@ -145,5 +145,5 @@ Distributed under the [GNU General Public License v3.0 License.](https://github.
 
 Special thanks to these amazing projects/people which/who help power logi Music and video Bot:
     
-- [TheHamkerCat](https://github.com/TheHamkerCat)
+- [.](https://github.com/god-of-karmas)
 
